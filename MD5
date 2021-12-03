@@ -1,0 +1,11 @@
+bb06c6fa422cbcd9bf0b3c6806385364 *DESCRIPTION
+0a4a71d5598ed9bd365d63a001833a41 *NAMESPACE
+fb14e17367664ef6cb9388025338bf57 *R/common.R
+2f47d62ac9a6500d9d345512b886a11b *R/mean_outcome_difference.R
+c43a0cac9c535aa7b4c45c911c120cd3 *R/mean_split_improvement.R
+c7a419a9e4727949c63da73b03da9f93 *README.md
+77ee771af29bf37c00432088f0311a6d *man/MeanOutcomeDifference.Rd
+3b92882a6418d32231bee8c12113d512 *man/MeanSplitImprovement.Rd
+305bfae9b7086a158f84d995ef307966 *tests/testthat.R
+5375c7a85fe91aee760a93fbfcd9d127 *tests/testthat/test-mean_outcome_difference.R
+8a0760e95e418eab452d4fdd63fd3fc2 *tests/testthat/test-mean_split_improvement.R
