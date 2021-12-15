@@ -1,44 +1,33 @@
 test_that("random example works", {
-  set.seed(49)
-
-  X <- matrix(runif(50*5), 50, 5)
-  Y <- matrix(runif(50*2), 50, 2)
   m_feature = 5
-  min_leaf = 5
+  min_leaf = 10
   n_trees = 20
-  sample_size = 20
+  sample_size = 16
 
+  set.seed(42)
   res <- MeanSplitImprovement(X, Y, sample_size, n_trees, m_feature, min_leaf)
-
   expect_length(res, ncol(X))
-  expect_equal(res, c(1.458, 2.965, 3.947, 1.175, 1.037), tolerance=1e-3)
+  expect_equal(res, c(0.681, 2.295, 1.559, 0.124, 0.091), tolerance=1e-3)
 })
 
 
 test_that("default values work", {
-  set.seed(49)
-
-  X <- matrix(runif(50*5), 50, 5)
-  Y <- matrix(runif(50*2), 50, 2)
+  set.seed(42)
   res <- MeanSplitImprovement(X, Y)
-
   expect_length(res, ncol(X))
-  expect_equal(res, c(0.807, 2.891, 3.460, 0.623, 0.514), tolerance=1e-3)
+  expect_equal(res, c(0.523, 3.195, 3.187, 0.816, 0.545), tolerance=1e-3)
 })
 
 
 test_that("f-test parameter works", {
-  set.seed(49)
-
-  X <- matrix(runif(50*5), 50, 5)
-  Y <- matrix(runif(50*2), 50, 2)
   m_feature = 5
-  min_leaf = 5
+  min_leaf = 10
   n_trees = 20
-  sample_size = 20
+  sample_size = 16
   alpha_threshold = 0.2
 
+  set.seed(42)
   res <- MeanSplitImprovement(X, Y, sample_size, n_trees, m_feature, min_leaf, alpha_threshold)
   expect_length(res, ncol(X))
-  expect_equal(res, c(1.052, 2.776, 3.662, 0.721, 0.877), tolerance=1e-3)
+  expect_equal(res, c(0.512, 2.277, 1.559, 0.104, 0.000), tolerance=1e-3)
 })
